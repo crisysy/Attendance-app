@@ -1,0 +1,23 @@
+<div class="col-md-6 col-md-offset-3">
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <p>Checkout your profile information</p>
+    <ul>
+        <li>First name: {{currentUser.firstName}}</li>
+        <li>Last name: {{currentUser.lastName}}</li>
+        <li>Username: {{currentUser.username}}</li>
+
+        <li>Email address: {{user.email}}</li>
+        <li>Student ID: {{user.studentID}}</li>
+        <li>Enrollment year: {{user.year}}</li>
+        <li>Enrollment group: {{user.group}}</li>
+    </ul>
+    <!--<h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            <div *ngIf="user.username = currentUser.username; else elseBlock">{{currentUser.username}}</div>
+            {{currentUser.email}}
+            - <a (click)="deleteUser(user.id)">Delete</a>
+        </li>
+    </ul>-->
+    <p><a [routerLink]="['/login']">Logout</a></p>
+</div>
